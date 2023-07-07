@@ -58,10 +58,14 @@ for url in all_urls:
     all_components.append(parse_url(url))
 
 
-if __name__ == '__main__':
+def main():
     for i, data in enumerate(all_components, 0):
         print(f"Компоненты в {tittles[i]}:")
         try:
             print(', '.join(i for i in data))
         except TypeError:
             print(data)
+
+
+if __name__ == '__main__':
+    main()
